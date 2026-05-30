@@ -79,7 +79,9 @@ git config tag.gpgSign true
 
 ## SSH authentication using Git for Windows
 
-This section is only relevant if you are storing your SSH key passphrase using Window's OpenSSH Authentication Agent. To ensure Git for Windows uses the agent where you've stored your credentials and not the one bundled with Git for Windows, force Git to use the system's SSH binary:
+This section is only relevant if you are storing your SSH key passphrase using Window's OpenSSH Authentication Agent (refer to my post on [loneguardian/SSH-GithubSetup](https://github.com/loneguardian/SSH-GithubSetup#optional-passphrase-caching-windows-openssh-authentication-agent-service)).
+
+To ensure Git for Windows uses the agent where you've stored your credentials and not the one bundled with Git for Windows, force Git to use the system's SSH binary:
 
 ```bash
 git config --global core.sshCommand "C:/Windows/System32/OpenSSH/ssh.exe"
@@ -87,8 +89,7 @@ git config --global core.sshCommand "C:/Windows/System32/OpenSSH/ssh.exe"
 
 [Source: GitHub Docs](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent?platform=windows#troubleshooting-ssh-agent-conflicts-in-windows)
 
-<!--
-This is a mirrored post:
+<!-- This is a related post. The following related posts should be checked for consistency:
 1. [Git-WindowsSetup repo](https://github.com/loneguardian/Git-WindowsSetup#ssh-authentication-using-git-for-windows)
-1. [SSH-GithubSetup repo](https://github.com/loneguardian/SSH-GithubSetup#ssh-authentication-using-git-for-windows)
+2. [SSH-GithubSetup repo](https://github.com/loneguardian/SSH-GithubSetup#ssh-authentication-using-git-for-windows)
 -->
