@@ -10,7 +10,8 @@ Contents:
 
 ## GPG signing using Gpg4win
 
-**UPDATE**: This information about setting up GPG signing on Git for Windows may be outdated. Feedback based on recent testing and setup is welcome.
+> [!IMPORTANT]
+> **UPDATE**: This information about setting up GPG signing on Git for Windows may be outdated. Feedback based on recent testing and setup is welcome.
 
 This setup was deemed necessary based on [the discussion on Stack Overflow](https://stackoverflow.com/questions/46992596/configure-gpg-for-git-on-windows). If your Git client is unable to locate a suitable GPG key to sign your commits, even though the key is in your GPG keyring, this setup should resolve the issue.
 
@@ -81,7 +82,7 @@ git config tag.gpgSign true
 
 This section is only relevant if you are storing your SSH key passphrase using Window's OpenSSH Authentication Agent (refer to my post on [loneguardian/SSH-GithubSetup](https://github.com/loneguardian/SSH-GithubSetup#optional-passphrase-caching-windows-openssh-authentication-agent-service)).
 
-To ensure Git for Windows uses the agent where you've stored your credentials and not the one bundled with Git for Windows, force Git to use the system's SSH binary:
+To ensure Git for Windows uses the agent where you've stored your credentials and not the one bundled with Git for Windows, force Git to use the system's SSH binary via the following command:
 
 ```bash
 git config --global core.sshCommand "C:/Windows/System32/OpenSSH/ssh.exe"
